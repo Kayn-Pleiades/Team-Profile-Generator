@@ -30,6 +30,9 @@ Added recommended folders and files. Installed needed packages.
 ### Commit 3: Init
 Added the class js files into the library. Initiated to create json package. Made simple welcome function. 
 
+### Commit 4: Manager Questions
+Added the inquirer questions for entering the manager information!
+
 ## Credits
 
 
