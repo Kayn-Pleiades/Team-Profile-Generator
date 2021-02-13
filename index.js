@@ -36,7 +36,7 @@ function addManager () {
             },
         ])
         .then((response) => {
-            console.log('ready for next step!');
+            console.log(response);
         });
 }
 
