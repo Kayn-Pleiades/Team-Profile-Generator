@@ -80,3 +80,6 @@ When 'I am done' is selected on the menu, the end of the html is added and the a
 
 ### Commit 18: Engineer Card
 The process to add engineers to the page is now functioning!
+
+### Commit 19: Intern Card
+Intern process is now also implimented! All my code is now working. Now to finish up and record the video!

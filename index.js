@@ -2,6 +2,7 @@
 // Packages required for this application
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
@@ -82,7 +83,7 @@ function menu() {
                 addEngineer();
             }
             else if (response.menu == 'Add an intern') {
-                console.log('Intern');
+                addIntern();
             }
             else if (response.menu == 'I am done') {
                 endPage();
@@ -151,11 +152,21 @@ function organizeData(employee, role) {
         makeCard(name, id, email, role, info);
     }
     else if (role == 'Engineer') {
-        // Const that applies just to manager
+        // Const that applies just to engineer
         const github = employee.getGithub();
 
         // Const that is needed for printing to html
-        const info = `<i class="bi bi-github"></i><a href="https://github.com/${github}"> ${github}</a>`;
+        const info = `<i class="bi bi-github"></i><a href="https://github.com/${github}" target="_blank"> ${github}</a>`;
+
+        // Function to print to card
+        makeCard(name, id, email, role, info);
+    }
+    else if (role == 'Intern') {
+        // Const that applies just to intern
+        const school = employee.getSchool();
+
+        // Const that is needed for printing to html
+        const info = `<i class="bi bi-door-open-fill"></i> ${school}`;
 
         // Function to print to card
         makeCard(name, id, email, role, info);
@@ -163,6 +174,38 @@ function organizeData(employee, role) {
     else {
         console.log('This is not an employee');
     }
+}
+
+// Function to add a manager
+function addIntern() {
+    inquirer
+        .prompt([
+            {
+                type: 'input',
+                message: `What is your Intern's name?`,
+                name: 'name',
+            },
+            {
+                type: 'input',
+                message: 'What is their employee ID?',
+                name: 'id',
+            },
+            {
+                type: 'input',
+                message: 'What is their email address?',
+                name: 'email',
+            },
+            {
+                type: 'input',
+                message: 'What school do they go to?',
+                name: 'school',
+            },
+        ])
+        .then((response) => {
+            const newIntern = new Intern(response.name, response.id, response.email, response.school);
+            const role = newIntern.getRole();
+            organizeData(newIntern, role);
+        });
 }
 
 // Function to add a manager
