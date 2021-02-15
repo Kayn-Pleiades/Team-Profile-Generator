@@ -36,6 +36,9 @@ Added the inquirer questions for entering the manager information!
 ### Commit 5: Employee
 Now, using the guildlines from the instructions, I will build the employee class file and its test. The test passes! So next will to be to extend it to the other classes. 
 
+### Commit 6: Manager
+I wrote a test for the Manager class, extended the Employee class into the Manager class, and tested that it works. 
+
 ## Credits
 
 

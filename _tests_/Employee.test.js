@@ -23,7 +23,7 @@ describe("Employee class", () => {
         });
     });
     describe("getRole method", () => {
-        it("returns the email", () => {
+        it("returns the role", () => {
             const employee = new Employee("Mitsui","321","Mitsui@MM.com");
             const role = employee.getRole();
             expect(role).toEqual("Employee");
