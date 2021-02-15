@@ -65,11 +65,38 @@ const htmlEnd = `
 `;
 
 // Functions
+// Menu
+function menu() {
+    inquirer
+        .prompt([
+            {
+                type: 'list',
+                message: 'What would you like to do next?',
+                name: 'menu',
+                choices: ['Add an engineer', 'Add an intern', 'I am done']
+            },
+        ])
+        .then((response) => {
+            if (response.menu == 'Add an engineer') {
+                console.log('Engineer');
+            }
+            else if (response.menu == 'Add an intern') {
+                console.log('Intern');
+            }
+            else if (response.menu == 'I am done') {
+                console.log('Done');
+            }
+        });
+}
+
 // Function to add card
 function addCard(code) {
     fs.appendFile(fileName, code, err => {
         if (err) {
             return console.error(err);
+        }
+        else {
+            menu();
         }
     });
 }

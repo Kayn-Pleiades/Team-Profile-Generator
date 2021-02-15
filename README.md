@@ -71,3 +71,6 @@ Added code to clear the html and put in the beginning code.
 
 ### Commit 15: addCard
 The manager card is now added to the html. This bit of code will work for all employee cards!
+
+### Commit 16: menu
+Added the selection menu and tested that it works 
