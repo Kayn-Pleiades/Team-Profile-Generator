@@ -74,3 +74,6 @@ The manager card is now added to the html. This bit of code will work for all em
 
 ### Commit 16: menu
 Added the selection menu and tested that it works 
+
+### Commit 17: endPage
+When 'I am done' is selected on the menu, the end of the html is added and the app ends. Now for the other two types of employees. After that, I should be about done!

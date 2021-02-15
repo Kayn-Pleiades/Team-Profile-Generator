@@ -84,9 +84,21 @@ function menu() {
                 console.log('Intern');
             }
             else if (response.menu == 'I am done') {
-                console.log('Done');
+                endPage();
             }
         });
+}
+
+// Function to add card
+function endPage() {
+    fs.appendFile(fileName, htmlEnd, err => {
+        if (err) {
+            return console.error(err);
+        }
+        else {
+            return console.log('Thank you! Your page is now ready!');
+        }
+    });
 }
 
 // Function to add card
