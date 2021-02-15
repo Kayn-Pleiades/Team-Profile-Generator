@@ -62,3 +62,6 @@ Changed some names to make things more clear. Now I will make the template for t
 
 ### Commit 12: Manager Card 
 Added the template code into index.js. Next step will be to start putting it together. 
+
+### Commit 13: Make Card
+Moved the card template to it's own function so I'm only writing it out once and not in every branch of the function it was already in.

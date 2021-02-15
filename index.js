@@ -60,6 +60,24 @@ const htmlEnd = `
 </html>
 `;
 
+// Function to create the cards
+function makeCard(name, id, email, role, info){
+    const card = `
+    <div class="card mt-5">
+        <div class="card-body">
+            <h5 class="card-title text-center">${name}</h5>
+            <h6 class="text-center">${role}</h6>
+            <ul class="list-group">
+                <li class="list-group-item"><i class="bi bi-envelope-fill"></i><a href="mailto:${email}"> ${email}</a></li>
+                <li class="list-group-item">${info}</li>
+            </ul>
+            <br>
+            <h5 class="text-right">#${id}</h5>
+        </div>
+    </div>
+`;
+}
+
 // Function to parse out the employee's data
 function organizeData(employee, role) {
     // Consts that apply to all employees
@@ -72,21 +90,10 @@ function organizeData(employee, role) {
         const phone = employee.getOfficeNumber();
 
         // Const that is needed for printing to html
-        const code = `
-                        <div class="card mt-5">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">${name}</h5>
-                                <h6 class="text-center">${role}</h6>
-                                <ul class="list-group">
-                                    <li class="list-group-item"><i class="bi bi-envelope-fill"></i><a href="mailto:${email}"> ${email}</a></li>
-                                    <li class="list-group-item"><i class="bi bi-telephone-fill"></i> ${phone}</li>
-                                </ul>
-                                <br>
-                                <h5 class="text-right">#${id}</h5>
-                            </div>
-                        </div>
-        `;
+        const info = `<i class="bi bi-telephone-fill"></i> ${phone}`;
 
+        // Function to print to card
+        makeCard(name, id, email, role, info);
     }
     else {
         console.log('This is not a manager');
