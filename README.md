@@ -59,3 +59,6 @@ I've moved the process section (this one) to the bottom of my README. As project
 
 ### Commit 11: HTML Template
 Changed some names to make things more clear. Now I will make the template for the HTML. 
+
+### Commit 12: Manager Card 
+Added the template code into index.js. Next step will be to start putting it together. 
