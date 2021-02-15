@@ -3,9 +3,10 @@ const Manager = require('./lib/Manager');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// Function to write profile to html
-function toHTML (employee, role) {
-    //consts that apply to all employees
+
+// Function to parse out the employee's data
+function organizeData (employee, role) {
+    // Consts that apply to all employees
     const name = employee.getName();
     const id = employee.getId();
     const email = employee.getEmail();
@@ -14,12 +15,10 @@ function toHTML (employee, role) {
         // Const that applies just to manager
         const phone = employee.getOfficeNumber();
 
-        // Output
-        console.log('This is a manager');
-        console.log(name);
-        console.log(id);
-        console.log(email);
-        console.log(phone);
+        // Consts that are needed for printing to html
+        const fileName = './src/manager.html';
+        const content = name + id + email + phone;
+
     }
     else {
         console.log('This is not a manager');
@@ -54,7 +53,7 @@ function addManager () {
         .then((response) => {
             const newManager = new Manager(response.name, response.id, response.email, response.phone);
             const role = newManager.getRole();
-            toHTML(newManager, role);
+            organizeData(newManager, role);
         });
 }
 

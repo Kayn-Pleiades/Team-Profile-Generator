@@ -1,0 +1,32 @@
+body {
+    background-color: #e4fffe;
+}
+
+header {
+    background-color: #f9e4ff;
+}
+
+.navbar-brand {
+    font-family: 'Fredoka One', cursive;
+    font-size: x-large;
+}
+
+header::after { 
+    position:absolute;
+    bottom: -49px;
+    left: 0px;
+    width: 100%;
+    content:" ";
+    background: 
+    radial-gradient(circle at 50% 0%, #f9e4ff 25%, #f9e4ff 26%, transparent 0%);
+    background-color: transparent;
+    background-size:20px 40px;  
+    height:50px;
+    background-repeat: repeat-x;
+    background-position: -25px 0px;
+}
+
+.card {
+    background-color: #f7ffe4;
+    width: 18rem;
+}

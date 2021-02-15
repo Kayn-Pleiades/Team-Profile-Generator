@@ -26,7 +26,7 @@ describe("Engineer class", () => {
         it("returns the employee's github profile url", () => {
             const engineer = new Engineer("Risako","7","Risako@Berryz.com","Berryz");
             const github = engineer.getGithub();
-            expect(github).toEqual("https://github.com/Berryz");
+            expect(github).toEqual("Berryz");
         });
     });
     describe("getRole method", () => {

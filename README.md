@@ -1,4 +1,4 @@
-# Team-Profile-Generator# README-generator
+# Team-Profile-Generator
 
 [Please click here for video tutorial!]()
 
@@ -56,3 +56,6 @@ For the process of writing to HTML, I'm wondering if I can make one function tha
 
 ### Commit 10: Manager info
 I've moved the process section (this one) to the bottom of my README. As projects become more detailed, these sections will get longer. Because I choose to track my own commit-by-commit process as a demonstration of my growth as a coder, I want to continue keeping this log. However, it doesn't fit in with the usual README content, so by putting it at the bottom, it's there if you want to read it, but otherwise it's unobtrusive :) Back to the code though! To make sure that the class functions are working as they are meant to, I had each value print to the console. Next will be to take this and turn it into the HTML I want it to be.
+
+### Commit 11: HTML Template
+Changed some names to make things more clear. Now I will make the template for the HTML. 
