@@ -68,3 +68,6 @@ Moved the card template to it's own function so I'm only writing it out once and
 
 ### Commit 14: startPage
 Added code to clear the html and put in the beginning code.
+
+### Commit 15: addCard
+The manager card is now added to the html. This bit of code will work for all employee cards!

@@ -4,6 +4,9 @@ const Manager = require('./lib/Manager');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+// File we are writing to
+const fileName = './dist/index.html';
+
 // HTML templates
 const htmlStart = `
 <!DOCTYPE html>
@@ -62,8 +65,17 @@ const htmlEnd = `
 `;
 
 // Functions
+// Function to add card
+function addCard(code) {
+    fs.appendFile(fileName, code, err => {
+        if (err) {
+            return console.error(err);
+        }
+    });
+}
+
 // Function to create the cards
-function makeCard(name, id, email, role, info){
+function makeCard(name, id, email, role, info) {
     const card = `
     <div class="card mt-5">
         <div class="card-body">
@@ -77,7 +89,8 @@ function makeCard(name, id, email, role, info){
             <h5 class="text-right">#${id}</h5>
         </div>
     </div>
-`;
+    `;
+    addCard(card);
 }
 
 // Function to parse out the employee's data
@@ -136,9 +149,6 @@ function addManager() {
 
 // Clear html file and put in first part of code
 function startPage() {
-    // File we are writing to
-    const fileName = './dist/index.html';
-
     // Clear and write the first part of the page
     fs.writeFile(fileName, htmlStart, err => {
         if (err) {
