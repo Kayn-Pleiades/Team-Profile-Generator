@@ -65,3 +65,6 @@ Added the template code into index.js. Next step will be to start putting it tog
 
 ### Commit 13: Make Card
 Moved the card template to it's own function so I'm only writing it out once and not in every branch of the function it was already in.
+
+### Commit 14: startPage
+Added code to clear the html and put in the beginning code.

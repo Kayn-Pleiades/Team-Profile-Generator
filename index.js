@@ -1,3 +1,4 @@
+// Consts
 // Packages required for this application
 const Manager = require('./lib/Manager');
 const fs = require('fs');
@@ -60,6 +61,7 @@ const htmlEnd = `
 </html>
 `;
 
+// Functions
 // Function to create the cards
 function makeCard(name, id, email, role, info){
     const card = `
@@ -132,9 +134,23 @@ function addManager() {
         });
 }
 
+// Clear html file and put in first part of code
+function startPage() {
+    // File we are writing to
+    const fileName = './dist/index.html';
+
+    // Clear and write the first part of the page
+    fs.writeFile(fileName, htmlStart, err => {
+        if (err) {
+            return console.error(err);
+        }
+    });
+}
+
 // Function to initialize app
 function init() {
     console.log('Welcome to the Team Profile Generator!');
+    startPage();
     console.log('First, we need some information about your manager.');
     addManager();
 }
