@@ -30,7 +30,7 @@ describe("Manager class", () => {
         });
     });
     describe("getRole method", () => {
-        it("returns the email", () => {
+        it("returns the role", () => {
             const manager = new Manager("Takahashi Ai","5","Ai@MM.com","(123)-456-789");
             const role = manager.getRole();
             expect(role).toEqual("Manager");

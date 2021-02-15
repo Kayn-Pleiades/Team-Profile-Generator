@@ -39,7 +39,11 @@ Now, using the guildlines from the instructions, I will build the employee class
 ### Commit 6: Manager
 I wrote a test for the Manager class, extended the Employee class into the Manager class, and tested that it works. 
 
+### Commit 7: Engineer
+I wrote a test for the Engineer class, extended the Employee class into the Engineer class, and tested that it works. Next I will repeat this process for the Intern class. 
+
 ## Credits
+Class Activities referenced: 10-16, 10-22, 10-24, 10-26, and 10-28.
 
 
 ## Questions
