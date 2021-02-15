@@ -1,6 +1,6 @@
 # Team-Profile-Generator
 
-[Please click here for video tutorial!]()
+[Please click here for video tutorial!](https://drive.google.com/file/d/1eMMtbUgPlHCmJ-bQdCohkb4sHGNev_mJ/view?usp=sharing)
 
 ## Table of Contents
 
@@ -20,11 +20,12 @@ This app allows users to quickly generate a page that shows the members of their
 To install this application, you will need to install the [Inquirer package](https://www.npmjs.com/package/inquirer) and the [Jest package](https://www.npmjs.com/package/jest)
 
 ## Usage
-To use this application, pleaese refer to [this video]()
+To use this application, pleaese refer to [this video](https://drive.google.com/file/d/1eMMtbUgPlHCmJ-bQdCohkb4sHGNev_mJ/view?usp=sharing)
 The application is run by entering the command "node index.js" in your terminal. 
 
 ## Credits
 Class Activities referenced: 10-16, 10-22, 10-24, 10-26, and 10-28.
+[Color Palette](https://www.color-hex.com/color-palette/25844)
 
 ## Tests
 To run the tests in this repository, first make sure the Jest package is installed, then run it by entering the command "npm run test" in your terminal. 
@@ -94,3 +95,6 @@ Intern process is now also implimented! All my code is now working. Now to finis
 
 ### Commit 20: README
 README filled out!
+
+### Commit 21: Video
+Video filmed and links added!
