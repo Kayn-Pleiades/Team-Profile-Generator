@@ -1,6 +1,7 @@
 // Consts
 // Packages required for this application
 const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
@@ -78,7 +79,7 @@ function menu() {
         ])
         .then((response) => {
             if (response.menu == 'Add an engineer') {
-                console.log('Engineer');
+                addEngineer();
             }
             else if (response.menu == 'Add an intern') {
                 console.log('Intern');
@@ -149,9 +150,51 @@ function organizeData(employee, role) {
         // Function to print to card
         makeCard(name, id, email, role, info);
     }
-    else {
-        console.log('This is not a manager');
+    else if (role == 'Engineer') {
+        // Const that applies just to manager
+        const github = employee.getGithub();
+
+        // Const that is needed for printing to html
+        const info = `<i class="bi bi-github"></i><a href="https://github.com/${github}"> ${github}</a>`;
+
+        // Function to print to card
+        makeCard(name, id, email, role, info);
     }
+    else {
+        console.log('This is not an employee');
+    }
+}
+
+// Function to add a manager
+function addEngineer() {
+    inquirer
+        .prompt([
+            {
+                type: 'input',
+                message: `What is your Engineer's name?`,
+                name: 'name',
+            },
+            {
+                type: 'input',
+                message: 'What is their employee ID?',
+                name: 'id',
+            },
+            {
+                type: 'input',
+                message: 'What is their email address?',
+                name: 'email',
+            },
+            {
+                type: 'input',
+                message: 'What is their github username?',
+                name: 'github',
+            },
+        ])
+        .then((response) => {
+            const newEngineer = new Engineer(response.name, response.id, response.email, response.github);
+            const role = newEngineer.getRole();
+            organizeData(newEngineer, role);
+        });
 }
 
 // Function to add a manager
