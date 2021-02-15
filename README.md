@@ -8,21 +8,29 @@
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
+* [Tests](#tests)
 * [Questions](#questions)
 * [Process](#process)
 
 ## Description 
+This app allows users to quickly generate a page that shows the members of their team!
 
 ## Installation 
 
-To install this application, you will need to install the [Inquirer package](https://www.npmjs.com/package/inquirer)
+To install this application, you will need to install the [Inquirer package](https://www.npmjs.com/package/inquirer) and the [Jest package](https://www.npmjs.com/package/jest)
 
 ## Usage
+To use this application, pleaese refer to [this video]()
+The application is run by entering the command "node index.js" in your terminal. 
 
 ## Credits
 Class Activities referenced: 10-16, 10-22, 10-24, 10-26, and 10-28.
 
+## Tests
+To run the tests in this repository, first make sure the Jest package is installed, then run it by entering the command "npm run test" in your terminal. 
+
 ## Questions
+For any questions you may have, you can reach me [via GitHub](https://github.com/Kayn-Pleiades) or [via email](mailto:kayn.pleiades@gmail.com)
 
 ## Process
 
@@ -83,3 +91,6 @@ The process to add engineers to the page is now functioning!
 
 ### Commit 19: Intern Card
 Intern process is now also implimented! All my code is now working. Now to finish up and record the video!
+
+### Commit 20: README
+README filled out!
