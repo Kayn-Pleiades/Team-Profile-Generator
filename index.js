@@ -5,8 +5,21 @@ const inquirer = require('inquirer');
 
 // Function to write profile to html
 function toHTML (employee, role) {
+    //consts that apply to all employees
+    const name = employee.getName();
+    const id = employee.getId();
+    const email = employee.getEmail();
+
     if (role == 'Manager') {
+        // Const that applies just to manager
+        const phone = employee.getOfficeNumber();
+
+        // Output
         console.log('This is a manager');
+        console.log(name);
+        console.log(id);
+        console.log(email);
+        console.log(phone);
     }
     else {
         console.log('This is not a manager');

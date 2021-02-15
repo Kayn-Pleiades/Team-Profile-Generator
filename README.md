@@ -7,9 +7,9 @@
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Process](#process)
 * [Credits](#credits)
 * [Questions](#questions)
+* [Process](#process)
 
 ## Description 
 
@@ -18,6 +18,11 @@
 To install this application, you will need to install the [Inquirer package](https://www.npmjs.com/package/inquirer)
 
 ## Usage
+
+## Credits
+Class Activities referenced: 10-16, 10-22, 10-24, 10-26, and 10-28.
+
+## Questions
 
 ## Process
 
@@ -47,10 +52,7 @@ I wrote a test for the Intern class, extended the Employee class into the Intern
 
 ### Commit 9: Is this a Manager?
 For the process of writing to HTML, I'm wondering if I can make one function that then branches based on role, rather than a function per role. To test this, I'll see if I can write a function that takes the role as a parameter and uses that for an if/else branch. If role is manager, I have it print "This is a manager", and it works!
-![image of a sample entry returning 'This is a manager'](./assets/img/isthisamanger.PNG)
+![image of a sample entry returning 'This is a manager'](https://github.com/Kayn-Pleiades/Team-Profile-Generator/blob/main/assets/img/isthisamanager.PNG)
 
-## Credits
-Class Activities referenced: 10-16, 10-22, 10-24, 10-26, and 10-28.
-
-
-## Questions
+### Commit 10: Manager info
+I've moved the process section (this one) to the bottom of my README. As projects become more detailed, these sections will get longer. Because I choose to track my own commit-by-commit process as a demonstration of my growth as a coder, I want to continue keeping this log. However, it doesn't fit in with the usual README content, so by putting it at the bottom, it's there if you want to read it, but otherwise it's unobtrusive :) Back to the code though! To make sure that the class functions are working as they are meant to, I had each value print to the console. Next will be to take this and turn it into the HTML I want it to be.
