@@ -1,13 +1,16 @@
 // Packages required for this application
-const { log } = require('console');
+const Manager = require('./lib/Manager');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// Function to initialize app
-function init () {
-    console.log('Welcome to the Team Profile Generator!');
-    console.log('First, we need some information about your manager.');
-    addManager();
+// Function to write profile to html
+function toHTML (employee, role) {
+    if (role == 'Manager') {
+        console.log('This is a manager');
+    }
+    else {
+        console.log('This is not a manager');
+    }
 }
 
 // Function to add a manager
@@ -22,7 +25,7 @@ function addManager () {
             {
                 type: 'input',
                 message: 'What is their employee ID?',
-                name: 'ID',
+                name: 'id',
             },
             {
                 type: 'input',
@@ -36,8 +39,17 @@ function addManager () {
             },
         ])
         .then((response) => {
-            console.log(response);
+            const newManager = new Manager(response.name, response.id, response.email, response.phone);
+            const role = newManager.getRole();
+            toHTML(newManager, role);
         });
+}
+
+// Function to initialize app
+function init () {
+    console.log('Welcome to the Team Profile Generator!');
+    console.log('First, we need some information about your manager.');
+    addManager();
 }
 
 // Call to initialize app

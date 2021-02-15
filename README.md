@@ -45,6 +45,10 @@ I wrote a test for the Engineer class, extended the Employee class into the Engi
 ### Commit 8: Intern
 I wrote a test for the Intern class, extended the Employee class into the Intern class, and tested that it works. Now all my tests pass! Yay!! Funfact, all test examples are based on Hello! Project members. Mitsui Aika, my favorite member, for employee, Takahashi Ai, former leader of Morning Musume, for manager, Sugaya Risako, member of Berryz Koubou (kanji for Kou being that used in engineering), for engineer, and Konemura Kirara, current member of the training program, as intern. Just a fun little easter egg :) Now! To go back to working on index, taking the inputed data for the manager, and turning it into something usable! 
 
+### Commit 9: Is this a Manager?
+For the process of writing to HTML, I'm wondering if I can make one function that then branches based on role, rather than a function per role. To test this, I'll see if I can write a function that takes the role as a parameter and uses that for an if/else branch. If role is manager, I have it print "This is a manager", and it works!
+![image of a sample entry returning 'This is a manager'](./assets/img/isthisamanger.PNG)
+
 ## Credits
 Class Activities referenced: 10-16, 10-22, 10-24, 10-26, and 10-28.
 
